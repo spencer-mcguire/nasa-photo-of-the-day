@@ -1,17 +1,17 @@
 import React from "react";
 
-const Card = () => {
+const Card = props => {
 	return (
 		<div>
 			<div>
-				<img alt=''></img>
+				<img alt='' src={props.imgUrl} />
 			</div>
 			<div>
 				<div>
-					<h2>Title</h2>
+					<h2>{props.title}</h2>
 				</div>
-				<p>date</p>
-				<p>exp</p>
+				<p>{props.date}</p>
+				<p>{props.exp}</p>
 			</div>
 		</div>
 	);
