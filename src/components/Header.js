@@ -1,12 +1,11 @@
 import React from "react";
+import logo from "./logo.png";
+import "../App.css";
 
 const Header = () => {
 	return (
-		<header>
-			<img
-				src='https://api.nasa.gov/assets/img/favicons/favicon-192.png'
-				alt='logo'
-			/>
+		<header className='header'>
+			<img className='.App-logo' src={logo} alt='logo' />
 		</header>
 	);
 };

@@ -13,8 +13,8 @@ const Body = () => {
 				setData(res.data);
 			})
 			.catch(err => console.log(`HOLD ON:`, err));
-	}, []);
-
+	}, [data]);
+	if (!data.url) return <h3>Loading...</h3>;
 	return (
 		<div className='body_container'>
 			<Card
