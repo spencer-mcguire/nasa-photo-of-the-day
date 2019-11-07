@@ -8,11 +8,11 @@ const Body = () => {
 	const [state, setState] = useState("2019-11-04");
 
 	function handleChange(event) {
-		setState({ value: event.target.value });
+		setState(event.target.value);
 	}
 
 	function handleSubmit(event) {
-		alert("A name was submitted: " + this.state.value);
+		alert("You changed the date to: " + state.value);
 		event.preventDefault();
 	}
 
