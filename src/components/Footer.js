@@ -1,10 +1,16 @@
 import React from "react";
+import styled from "styled-components";
+
+const FooterContainer = styled.footer`
+	margin-top: 20px;
+	margin-bottom: 20px;
+`;
 
 const Footer = () => {
 	return (
-		<footer className='footer'>
+		<FooterContainer>
 			<p>Copywrite 2019</p>
-		</footer>
+		</FooterContainer>
 	);
 };
 export default Footer;

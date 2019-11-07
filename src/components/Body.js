@@ -7,8 +7,8 @@ import Axios from "axios";
 
 const Body = () => {
 	const [data, setData] = useState({});
-	const [state, setState] = useState("2019-11-07");
-
+	const [state, setState] = useState("");
+	console.log(state);
 	function handleChange(event) {
 		setState(event.target.value);
 	}
@@ -20,19 +20,20 @@ const Body = () => {
 
 	useEffect(() => {
 		Axios.get(
-			`https://api.nasa.gov/planetary/apod?api_key=Zu8ST0QfIvfmcbkg5b9dB5fNRmeGYdUGNwZPFoeR&date=${state}`
+			`https://api.nasa.gov/planetary/apod?api_key=Oa51ZZKyotiD8m1EiXi33mhbrAdqRBD8dwmlkKlO&date=${state}`
 		)
 			.then(res => {
 				setData(res.data);
 			})
 			.catch(err => console.log(`HOLD ON:`, err));
-	}, [data, state]);
+	}, [state]);
 	if (!data.url) return <Spinner type='grow' color='danger' />;
 	return (
 		<Container>
 			<Card
 				handleChange={handleChange}
 				handleSubmit={handleSubmit}
+				state={state}
 				imgUrl={data.url}
 				title={data.title}
 				date={data.date}

@@ -16,25 +16,26 @@ const TitleDiv = styled.div`
 	border-bottom: 1px solid black;
 	background: rgba(0, 0, 0, 0.3);
 	padding: 20px;
+	padding: 20px;
 `;
 
 const CardImg = styled.img`
 	width: auto;
-	height: 100vh;
+	height: 500px;
 `;
 
 const Card = props => {
 	return (
 		<Container>
+			<CardImg alt='pic of the day' src={props.imgUrl} />
 			<CardContainer>
-				<CardImg alt='pic of the day' src={props.imgUrl} />
-				<div className='title'>
+				<TitleDiv>
 					<h2>{props.title}</h2>
-				</div>
+				</TitleDiv>
 				<p>{props.date}</p>
 				<p>{props.exp}</p>
 			</CardContainer>
-			<DateForm />
+			<DateForm handleChange={props.handleChange} state={props.state} />
 		</Container>
 	);
 };
