@@ -14,14 +14,14 @@ const CardContainer = styled.div`
 
 const TitleDiv = styled.div`
 	border-bottom: 1px solid black;
-	background: rgba(0, 0, 0, 0.3);
-	padding: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	margin: 20px;
 	padding: 20px;
 `;
 
 const CardImg = styled.img`
 	width: auto;
-	height: 500px;
+	height: 550px;
 `;
 
 const Card = props => {
