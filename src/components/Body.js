@@ -8,7 +8,7 @@ import Axios from "axios";
 const Body = () => {
 	const [data, setData] = useState({});
 	const [state, setState] = useState("");
-	console.log(state);
+
 	function handleChange(event) {
 		setState(event.target.value);
 	}
