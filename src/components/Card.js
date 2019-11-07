@@ -16,12 +16,7 @@ const Card = props => {
 			</div>
 			<form>
 				<label>See Another Date</label>
-				<input
-					type='text'
-					placeholder='year-month-day'
-					value={props.state.value}
-					onChange={props.handleChange}
-				></input>
+				<input type='text' placeholder='year-month-day'></input>
 				<input type='submit' value='submit' />
 			</form>
 		</div>
