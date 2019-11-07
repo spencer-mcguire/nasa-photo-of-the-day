@@ -32,9 +32,9 @@
 	}
 }
 
-.body_container {
+/* .body_container {
 	margin: 30px;
-}
+} */
 
 .header {
 	margin-top: 20px;
@@ -45,12 +45,12 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-
+/* 
 .card_container {
 	margin: 35px;
 	box-shadow: 10px 10px 5px #aaaaaa;
 	padding: 15px;
-}
+} */
 
 .splash {
 	width: auto;

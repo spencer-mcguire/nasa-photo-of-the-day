@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import "../App.css";
+import { Container, Spinner } from "reactstrap";
+
 import Axios from "axios";
 
 const Body = () => {
 	const [data, setData] = useState({});
-	const [state, setState] = useState("2019-11-04");
+	const [state, setState] = useState("2019-11-07");
 
 	function handleChange(event) {
 		setState(event.target.value);
@@ -25,9 +27,9 @@ const Body = () => {
 			})
 			.catch(err => console.log(`HOLD ON:`, err));
 	}, [data, state]);
-	if (!data.url) return <h3>Loading...</h3>;
+	if (!data.url) return <Spinner type='grow' color='danger' />;
 	return (
-		<div className='body_container'>
+		<Container>
 			<Card
 				handleChange={handleChange}
 				handleSubmit={handleSubmit}
@@ -36,7 +38,7 @@ const Body = () => {
 				date={data.date}
 				exp={data.explanation}
 			/>
-		</div>
+		</Container>
 	);
 };
 
